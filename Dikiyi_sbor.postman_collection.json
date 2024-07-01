@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "31578832-3200-4d54-872a-1febf428ec74",
+		"name": "Dikiyi_sbor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31508005"
+	},
+	"item": [
+		{
+			"name": "Добавление одного товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"1\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"idCookie\":\"834612\",\"idProd\":\"180\",\"type\":\"add\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{main_url}}/ajax/basketOrder.php",
+					"host": [
+						"{{main_url}}"
+					],
+					"path": [
+						"ajax",
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка формы с корзины",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "'{\"all\":{\"project_name\":\"Дикий+Сбор\",\"admin_email\":\"ooo_ecotaiga@mail.ru\",\"form_subject\":\"Выбраны+товары+на+сайте\",\"colprod\":\"1+шт\",\"Имя\":\"Даша\",\"Телефон\":\"+7+(999)+999-9999\"},\"inp\":\"<p>Товар:+Грузди+соленые+Цена:+1400руб+1шт+Сумма:+1400руб</p><p>Общая+сумма:+1400руб</p>\"}'",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{main_url}}/ajax/basketSend.php",
+					"host": [
+						"{{main_url}}"
+					],
+					"path": [
+						"ajax",
+						"basketSend.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение количества товаров",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"idCookie\":\"457164\",\"idProd\":\"178\",\"type\":\"plus\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{main_url}}/ajax/basketOrder.php",
+					"host": [
+						"{{main_url}}"
+					],
+					"path": [
+						"ajax",
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"0\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"idCookie\":\"457164\",\"idProd\":\"178\",\"type\":\"delete\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{main_url}}/ajax/basketOrder.php",
+					"host": [
+						"{{main_url}}"
+					],
+					"path": [
+						"ajax",
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отображение пустой корзины",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Корзина пуста, необходимо это исправить\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"idCookie\":\"457164\",\"idProd\":\"178\",\"type\":\"delete\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{main_url}}//ajax/basketList.php",
+					"host": [
+						"{{main_url}}"
+					],
+					"path": [
+						"",
+						"ajax",
+						"basketList.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "main_url",
+			"value": "https://www.sibdar-spb.ru",
+			"type": "string"
+		}
+	]
+}
