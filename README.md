@@ -1,32 +1,13 @@
 # Final_task_Dikiyi_sbor
 
-## Задача проекта
-Провести нефункциональное тестирование, тестирование API, SQL и автоматизированное тестирование интернет-магазина "Дикий сбор".
+## Задача проекта: провести тестирование интернет-магазина "Дикий сбор".
 
-## Шаблон для автоматизации тестирования на python
+1. Ветка Base. Чек-лист наиболее важных проверок для функционала поиска на платформе https://sibdar-spb.ru/
 
-### Шаги
-1. Склонировать проект 'git clone https://github.com/Dashutkabramovich/Dikiyi_sbor'
-2. Установить зависимости
-3. Запустить тесты 'pytest'
+2. Ветка API. Коллекция Postman, которая проводит смоук-тест корзины https://sibdar-spb.ru/ и инструкция по работе с ней.
 
-### Стек
-- pytest
-- selenium
-- request
-- allure
+3. Ветка SQL. Работа с БД
 
-### Структура
-- ./test - тесты
-- ./pages - описание страниц
-- ./api - хелперы для работы с API
-  
-### Библиотеки
-- pip install pytest
-- pip install selenium
-- pip install webdriver-manager
-- pip install allure
-  
-### Полезные ссылки
-- [Подсказка на markdown](https://www.markdownguide.org/basic-syntax/)
-- [Генератор файла .gitignore](https://www.toptal.com/developers/gitignore)
+4. Ветка Auto. Автотесты API и UI на функционал корзины интернет-магазина https://sibdar-spb.ru/
+
+5. Ветка Soft. Видеоинструкция
